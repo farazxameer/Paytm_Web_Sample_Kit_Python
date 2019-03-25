@@ -24,7 +24,7 @@ def generate_checksum(param_dict, merchant_key, salt=None):
 
 def generate_refund_checksum(param_dict, merchant_key, salt=None):
     for i in param_dict:    
-    if("|" in param_dict[i]):
+      if("|" in param_dict[i]):
         param_dict = {}
         exit()
     params_string = __get_param_string__(param_dict)
